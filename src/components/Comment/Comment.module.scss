@@ -1,0 +1,13 @@
+.container{
+  padding: 10px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  .by{
+    font-weight: bold;
+  }
+  .button{
+    max-width: 100px;
+    border: none;
+    margin-top: 10px;
+  }
+}

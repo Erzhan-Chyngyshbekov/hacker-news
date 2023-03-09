@@ -1,0 +1,22 @@
+.button{
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+  &:hover{
+    background: #ff6600;
+    transition: 0.1s ease-in;
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
+.buttonOrange{
+  background: #ff6600;
+  color: #fff;
+  &:hover{
+    transition: none;
+    border-color: none;
+  }
+}
