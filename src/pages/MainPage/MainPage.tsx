@@ -20,10 +20,6 @@ export const MainPage: React.FC = () => {
   };
 
   React.useEffect(() => {
-    if (stories.length) {
-      return;
-    }
-
     dispatch(getNews());
     const interval = setInterval(() => {
       dispatch(getNews());
@@ -37,7 +33,8 @@ export const MainPage: React.FC = () => {
       <AppButton className={styles.button} onClick={updateStories}>
         Update
       </AppButton>
-      {isLoading ? <AppLoading /> : <StoriesList stories={stories} />}
+      {isLoading && <AppLoading />}
+      <StoriesList stories={stories} />
       {error && <p>{error}</p>}
     </div>
   );
