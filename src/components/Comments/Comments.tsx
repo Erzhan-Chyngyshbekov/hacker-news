@@ -1,7 +1,6 @@
 import React from "react";
-import { Comment } from "../Comment/Comment";
 
-import styles from "./Comments.module.scss";
+import { Comment } from "../Comment/Comment";
 
 interface Props {
   commentKids: number[];
@@ -9,10 +8,10 @@ interface Props {
 
 export const Comments: React.FC<Props> = ({ commentKids }) => {
   return (
-    <div className={styles.container}>
+    <>
       {commentKids.map((id) => (
         <Comment key={id} commentId={id} />
       ))}
-    </div>
+    </>
   );
 };
